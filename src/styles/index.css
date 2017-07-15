@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Work sans', sans-serif;
+}
+
+.main-header {
+  font-style: 'Work sans', sans-serif;
+  width: 100%;
+  height: 108px;
+  background: tomato;
+  position: fixed;
+  text-align:center;
+   padding-top:12px; 
+}
+
+  .main-header div {
+  /* margin-top: 32px; */
+  height:100%;
+}  
+
+.main-header h2 {
+  font-size: xx-large;
+  display:inline;
+}
+
+.main-header p {
+  font-size:42px;
+  font-weight:400;
+  display:inline;
+}
+
+.main-wrapper {
+  width:100%;
+  height:100%;
+}
+
+.search-wrapper {
+  height:100vh;
+  width:28%;
+  padding-top:148px;
+  background:lightblue;
+}
+
+.search-wrapper p {
+  font-size:x-large;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.origin {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.origin input {
+  font-size:large;
+  width:156px;
+}
+
+.destination {
+  display:flex;
+  flex-direction:column;
+  align-items:center;  
+}
+
+.destination input {
+  font-size:large;
+  width:156px;
+}
+
+.timeframe-wrapper {
+  padding-top:24px;
+}
+
+.time-input div {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.time-input input {
+  font-size:large;
+  margin-left:8px;
+  width:132px;
+}
+
+.passengers-wrapper div {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.passengers-wrapper input {
+  font-size:large;
+  width:32px;
+}
+
+.search-button {
+  display:flex;
+  justify-content:center;
+}
+
+.search-button button {
+  margin-top:64px;
+  font-size:large;
+  font-family: 'Work sans', sans-serif;
+  height:39px;
+}
