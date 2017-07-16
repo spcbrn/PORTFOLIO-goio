@@ -2,7 +2,13 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Work sans', sans-serif;
+  height:100vh;
 }
+
+
+
+
+
 
 .main-header {
   font-style: 'Work sans', sans-serif;
@@ -11,7 +17,8 @@ body {
   background: tomato;
   position: fixed;
   text-align:center;
-   padding-top:12px; 
+  padding-top:12px;
+  z-index:1;
 }
 
   .main-header div {
@@ -30,16 +37,33 @@ body {
   display:inline;
 }
 
-.main-wrapper {
+
+
+
+
+
+.site-wrapper {
   width:100%;
   height:100%;
+  position:relative;
+  background:url(./../img/us-night-orbit.jpg) no-repeat center;
+  background-size:cover;
 }
 
+ .content-wrapper {
+  display:flex;
+} 
+
+
+
+
+
+
+
 .search-wrapper {
-  height:100vh;
+  height:calc(100vh - 148px);
   width:28%;
-  padding-top:148px;
-  background:lightblue;
+  /* background:lightblue; */
 }
 
 .search-wrapper p {
@@ -47,6 +71,14 @@ body {
   display:flex;
   flex-direction:column;
   align-items:center;
+}
+
+.search-comp {
+    height:86%;
+    width:100%;
+    background:rgb(139, 209, 239);
+    border-radius:5px;
+    margin-top:186px;
 }
 
 .origin {
@@ -108,4 +140,80 @@ body {
   font-size:large;
   font-family: 'Work sans', sans-serif;
   height:39px;
+}
+
+.search-bottom {
+  width:100%;
+  height:310px;
+  background:white;
+  margin-top:72px;
+}
+
+
+
+
+
+.results-wrapper-main {
+    width:72%;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+.header-shim {
+    width:100%;
+    height:108px;
+    background:rgba(255, 255, 255, 0.1);
+}
+
+.results-container {
+    width:100%;
+    height:calc(100% - 108px);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+.results-flow {
+  width:90%;
+  height: 90%;
+  margin:auto;
+  background:rgba(116, 181, 209, .93);
+  display:flex; 
+  flex-direction:column;
+  align-items:center;
+}
+
+.results-body {
+  width:100%;
+  height:80%;
+  overflow:auto;
+}
+
+.results-table {
+  display:table;
+  width:90%;
+  text-align:center;
+  margin:auto;
+  border-collapse:separate;
+  border-spacing:0 .5em;
+}
+
+
+
+.result {
+    background:rgb(139, 209, 239);
+    border-bottom:solid 1px rgb(30, 121, 160);
+    border-top:solid 1px rgb(30, 121, 160);
+    border-left:solid 1px rgb(30, 121, 160);
+    border-right:solid 1px rgb(30, 121, 160);    
+}
+
+result:hover {
+  background:rgb(30, 121, 160);
+}
+
+.result td {
+  padding:12px;
 }
