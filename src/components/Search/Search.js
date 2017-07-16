@@ -178,11 +178,14 @@ class Search extends Component {
                         <section className="timeframe-wrapper">
                             <p>When?</p>
                             <div className="time-input">
-                                <div>
+                                <div className="depart-input">
                                     <p>Depart:</p><input placeholder="YYYY-MM-DD" onChange={this.handleDepartInput} value={this.state.departInput}/>
                                 </div>
-                                <div>
-                                    <p>Return:</p><input placeholder="YYYY-MM-DD" onChange={this.handleReturnInput} value={this.state.returnInput}/>
+                                <div className="return-input">
+                                    <div className="return-input-line">
+                                        <p>Return:*</p><input placeholder="YYYY-MM-DD" onChange={this.handleReturnInput} value={this.state.returnInput}/>
+                                    </div>
+                                    <div><p className="conditional-text">*Leave 'Return' blank for one-way trips.</p></div>                                    
                                 </div>
                             </div>
                         </section>

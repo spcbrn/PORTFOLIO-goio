@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   padding: 0;
@@ -22,7 +23,6 @@ body {
 }
 
   .main-header div {
-  /* margin-top: 32px; */
   height:100%;
 }  
 
@@ -37,6 +37,11 @@ body {
   display:inline;
 }
 
+.logo el {
+  width:fit-content;
+}
+
+
 
 
 
@@ -46,13 +51,33 @@ body {
   width:100%;
   height:100%;
   position:relative;
-  background:url(./../img/us-night-orbit.jpg) no-repeat center;
-  background-size:cover;
+  background:url(./../img/beach-scene-one-edit.jpg) top center; 
+  /* background-size:100% 42%; */
+  background-repeat:no-repeat;
 }
 
  .content-wrapper {
   display:flex;
+  flex-direction:column; 
 } 
+
+
+
+
+
+@media (max-width: 750px) {
+  .geo-input {
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .site-wrapper {
+    background-position: fixed;
+  }
+
+}
+
+
 
 
 
@@ -61,8 +86,8 @@ body {
 
 
 .search-wrapper {
-  height:calc(100vh - 148px);
-  width:28%;
+  height:fit-content;
+  width:100%;
   /* background:lightblue; */
 }
 
@@ -74,17 +99,25 @@ body {
 }
 
 .search-comp {
-    height:86%;
-    width:100%;
-    background:rgb(139, 209, 239);
+    height:fit-content;
+    width:fit-content;
+    background: linear-gradient(to bottom, rgba(136,191,232,1) 0%,rgba(112,176,224,1) 100%);
     border-radius:5px;
     margin-top:186px;
+    margin-left:10%;
+    box-shadow: 10px 10px 41px -13px rgba(0,0,0,0.75);
+}
+
+.geo-input {
+  display:flex;
+  justify-content:space-around;
 }
 
 .origin {
   display:flex;
   flex-direction:column;
   align-items:center;
+  margin:0 16px;
 }
 
 .origin input {
@@ -95,7 +128,8 @@ body {
 .destination {
   display:flex;
   flex-direction:column;
-  align-items:center;  
+  align-items:center;
+  margin:0 16px;
 }
 
 .destination input {
@@ -104,19 +138,35 @@ body {
 }
 
 .timeframe-wrapper {
-  padding-top:24px;
+  padding-top:16px;
 }
 
-.time-input div {
+.depart-input {
   display:flex;
   justify-content:center;
+   align-items:center; 
+}
+
+.return-input {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.return-input .return-input-line {
+  display:flex;
   align-items:center;
+  justify-content:center;
 }
 
 .time-input input {
   font-size:large;
   margin-left:8px;
   width:132px;
+}
+
+.time-input .conditional-text {
+  font-size:xx-small;
 }
 
 .passengers-wrapper div {
@@ -136,49 +186,43 @@ body {
 }
 
 .search-button button {
-  margin-top:64px;
+  margin-top:24px;
+  margin-bottom:24px;
   font-size:large;
   font-family: 'Work sans', sans-serif;
   height:39px;
 }
 
-.search-bottom {
-  width:100%;
-  height:310px;
-  background:white;
-  margin-top:72px;
+
+
+@media (max-width: 350px) {
+  .search-comp {
+    margin:auto;
+    margin-top:186px;
+  }
 }
-
-
-
 
 
 .results-wrapper-main {
-    width:72%;
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-}
-
-.header-shim {
     width:100%;
-    height:108px;
-    background:rgba(255, 255, 255, 0.1);
+    height:100vh;
+    /* display:flex;
+    flex-direction:column; */
 }
 
 .results-container {
     width:100%;
-    height:calc(100% - 108px);
+    height:100%;
     display:flex;
     justify-content:center;
-    align-items:center;
-    position:relative;
+    align-items:flex-start;
+
 }
 
 .results-flow {
-  width:90%;
-  height: 90%;
-  margin:auto;
+  width:86%;
+  height: 80%;
+   margin-top:64px; 
   background:rgba(116, 181, 209, .93);
   display:flex; 
   flex-direction:column;
@@ -196,24 +240,30 @@ body {
   width:90%;
   text-align:center;
   margin:auto;
-  border-collapse:separate;
-  border-spacing:0 .5em;
+   border-collapse:separate;
+  border-spacing:0 .5em; 
 }
 
 
 
-.result {
-    background:rgb(139, 209, 239);
+.result-one {
+    background:rgb(244, 251, 255);
     border-bottom:solid 1px rgb(30, 121, 160);
     border-top:solid 1px rgb(30, 121, 160);
-    border-left:solid 1px rgb(30, 121, 160);
-    border-right:solid 1px rgb(30, 121, 160);    
+     border-left:solid 1px rgb(30, 121, 160);
+    border-right:solid 1px rgb(30, 121, 160); 
+    margin-top:8px;
+    z-index:1;
 }
 
-result:hover {
-  background:rgb(30, 121, 160);
+.result-one:hover {
+  background:white;
 }
 
-.result td {
+.result-one td {
   padding:12px;
+}
+
+.row-wrapper{
+  border:solid 1px black;
 }

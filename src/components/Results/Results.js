@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {postReady} from './../../ducks/mainReducer';
 import {handlePost} from './../../services/axiosServices';
-import RenderResults from './RenderResults';
-import {dataOneWayArray, dataRoundTripArray} from './../../dummyData';
+import {RenderResultsOneWay, RenderResultsRoundTrip} from './RenderResults';
+// import {dataOneWayArray, dataRoundTripArray} from './../../dummyData';
 
 
 class Results extends Component {
@@ -27,20 +27,35 @@ class Results extends Component {
 
     render() {
         const resultsArr = this.props.queryResults.map((obj, i) => {
-            return (
-                <RenderResults key={i}
-                        price={obj.saleTotal}
-                        origin={obj.slice[0].segment[0].leg[0].origin + ' ' + obj.slice[0].segment[0].leg[0].departureTime}
-                        layover={'No'}
-                        destination={obj.slice[0].segment[0].leg[0].destination + ' ' + obj.slice[0].segment[0].leg[0].arrivalTime}
-                        passengers={this.props.postQuery.request.passengers.adultCount}
-                />
-            )
+            if(obj.slice.length === 1){
+                return (
+                    <RenderResultsOneWay key={i}
+                            price={obj.saleTotal}
+                            origin={obj.slice[0].segment[0].leg[0].origin + ' - ' + obj.slice[0].segment[0].leg[0].departureTime}
+                            layover={obj.slice[0].segment.length === 1 ? 'No' : obj.slice[0].segment[0].leg[0].destination}
+                            destination={obj.slice[0].segment[obj.slice[0].segment.length-1].leg[0].destination + ' ' + obj.slice[0].segment[obj.slice[0].segment.length-1].leg[0].arrivalTime}
+                            passengers={this.props.postQuery.request.passengers.adultCount}
+                    />
+                )
+            }
+            else{
+                return (
+                    <RenderResultsRoundTrip key={i}
+                            price={obj.saleTotal}
+                            originOut={obj.slice[0].segment[0].leg[0].origin + ' - ' + obj.slice[0].segment[0].leg[0].departureTime}
+                            originIn={obj.slice[1].segment[0].leg[0].origin + ' - ' + obj.slice[1].segment[0].leg[0].departureTime}
+                            layoverOut={obj.slice[0].segment.length === 1 ? 'No' : obj.slice[0].segment[0].leg[0].destination}
+                            layoverIn={obj.slice[1].segment.length === 1 ? 'No' : obj.slice[1].segment[0].leg[0].destination}
+                            destinationOut={obj.slice[0].segment[obj.slice[0].segment.length-1].leg[0].destination + ' - ' + obj.slice[0].segment[obj.slice[0].segment.length-1].leg[0].arrivalTime}
+                            destinationIn={obj.slice[1].segment[obj.slice[1].segment.length-1].leg[0].destination + ' - ' + obj.slice[1].segment[obj.slice[1].segment.length-1].leg[0].arrivalTime}
+                            passengers={this.props.postQuery.request.passengers.adultCount}
+                    />
+                )
+            }
         })
 
         return(
             <main className="results-wrapper-main">
-                <div className="header-shim"></div>
                     <div className="results-container">
                         <div className="results-flow">
                             <header className="results-header">
