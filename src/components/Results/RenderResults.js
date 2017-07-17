@@ -19,7 +19,6 @@ export function RenderResultsOneWay(props) {
 
 export function RenderResultsRoundTrip(props) {
     return(
-            <div className="row-wrapper">
                 <tr className="result-one">
                     <td>{props.price}</td>
                     <td>{props.originOut}<br />
@@ -36,6 +35,5 @@ export function RenderResultsRoundTrip(props) {
                         <button onClick={() => {alert(`Flight has been booked for ${props.passengers} at ${props.price}!  Don't forget to bring a towel!`)}}>Book</button>
                     </td>                                    
                 </tr>            
-            </div>
     )
 }

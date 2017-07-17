@@ -195,7 +195,7 @@ class Search extends Component {
                                 <input onChange={this.handlePassengers} value={this.state.passengers}/>
                             </div>
                         </section>
-                        <div className="search-button">
+                        <div className="flight-search-button">
                             <div style={this.state.searchReady ? buttonStyle : null} onClick={this.handleClickAccept}>
                             <ButtonAccept />
                             </div>
@@ -203,7 +203,9 @@ class Search extends Component {
                             <ButtonSubmit />
                             </div>
                         </div>
+                        <div className="results-text">Results Below</div>
                     </div>
+                    <section className="search-results-divider"><div className="divider-image"></div></section>
                 </div>
                 <Results />
             </main>
