@@ -2,14 +2,36 @@
 
 
 
+
+/*---------------------------|main body|---------------------------*/
+
+
+
+
+
 body {
   margin: 0;
   padding: 0;
   font-family: 'Work sans', sans-serif;
-  height:100vh;
-  background:rgb(229, 239, 255);  
+  background:rgb(229, 239, 255);
+  height:100%;
 }
 
+
+.site-wrapper {
+  /* width:100%;
+  height:100%; */
+  /* position:relative; */
+  /* background:url(./../img/beach-scene-one-edit.jpg) top center; 
+  background-repeat:no-repeat; */
+}
+
+
+
+
+
+
+/*---------------------------|header|---------------------------*/
 
 
 
@@ -44,6 +66,13 @@ body {
   display:inline;
 }
 
+
+
+/*---------------------------|nav bar|---------------------------*/
+
+
+
+
 .header-nav {
   height:16px;
   width:300px;
@@ -71,6 +100,7 @@ body {
 .header-nav a:hover {
   color:#000;
 }
+
 
 
 
@@ -163,20 +193,198 @@ body {
 
 
 
-.site-wrapper {
-  width:100%;
+
+/*---------------------------|landing|---------------------------*/
+
+
+
+
+
+
+
+
+.landing-wrapper {
   height:100%;
-  position:relative;
-  /* background:url(./../img/beach-scene-one-edit.jpg) top center; 
-  background-repeat:no-repeat; */
+  max-width:100%;
+  text-align:center;
 }
+
+.landing-wrapper div {
+   display:block; 
+}
+
+.header-shim {
+  width:100%;
+  height:108px;
+}
+
+.landing-div-one {
+  min-height:100vh;
+  background-image:url(./../img/para/bay-bridge.jpg);
+  position:relative; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.landing-welcome {
+  position:absolute;
+  width:100%; 
+  top:42%;
+  
+}
+
+.landing-welcome-text {
+  width:100%;
+  color:rgb(227, 249, 252); 
+  background:rgba(1, 1, 11, .86);
+  padding:8px 0px;
+}
+
+.landing-welcome h2 {
+  font-size: xx-large;
+  display:inline;
+}
+
+.landing-welcome p {
+  font-size:42px;
+  font-weight:400;
+  display:inline;
+}
+
+.landing-welcome h5 {
+  font-size:x-small;
+  margin-bottom:0px;
+
+}
+
+
+
+
+
+.landing-div-two {
+  min-height:100vh;
+  background-image:url(./../img/para/cloudy-village.jpg);
+   position:relative; 
+   background-attachment: fixed; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.landing-about {
+  width:100%;
+  height:216px;
+  background:rgb(227, 249, 252);
+  margin:auto;
+  padding-top:24px;
+}
+
+.about-text {
+  font-size:18px;
+}
+
+.about-points {
+  width:fit-content;
+  margin:auto;
+  text-align:left;
+}
+
+
+
+
+
+.landing-div-three {
+  min-height:100vh;
+  background-image:url(./../img/para/hot-air-balloons.jpg);
+   position:relative; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.landing-disclaimer {
+  width:100%;
+  height:272px;
+  background:rgb(227, 231, 252);
+  padding-top:24px;
+}
+
+.landing-disclaimer-text {
+  font-size:18px;
+}
+
+.landing-disclaimer-points {
+  width:fit-content;
+  margin:auto;
+  text-align:left;  
+}
+
+
+
+
+
+.landing-div-four {
+  min-height:100vh;
+  background-image:url(./../img/para/trop-down.jpg);
+  position:relative; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.landing-final {
+  width:100%;
+  position:absolute;
+  top:36%;
+  background:rgba(31, 91, 65, .87);
+  padding-bottom:16px;
+}
+
+.landing-final p {
+  font-size:42px;
+  font-weight:500;
+}
+
+.landing-earth {
+  background-image:url(./../img/earth1.png);
+  background-size:contain;
+  height:120px;
+  width:120px;
+  margin:auto;
+  border-radius:50%;
+}
+
+.landing-earth:hover{
+  background-color:rgba(94, 186, 140, .8);
+}
+
+
+
+
+
+
+
+
+/*---------------------------|search page content|---------------------------*/
+
+
+
+
+
+
+
 
  .content-wrapper {
   display:flex;
   flex-direction:column;
-  background:url(./../img/beach-scene-one-edit.jpg) top center; 
+  background:url(./../img/coastal-city.jpg) top center; 
   background-repeat:no-repeat;
-
+  background-attachment:fixed;
+  background-size:cover;
 } 
 
 
@@ -184,8 +392,7 @@ body {
 
 
 
-
-
+/*---------------------------|search bar|---------------------------*/
 
 
 
@@ -316,16 +523,27 @@ body {
 
 
 
+
+
+/*---------------------------|page divider|---------------------------*/
+
+
+
+
+
+
+
+
 .search-results-divider {
   width:100%;
-  height:169px;
+  height:165px;
   background: linear-gradient(to right, rgba(0, 169, 166,1) 31%,rgba(15, 162, 182,1) 50%,rgba(0, 169, 166,1) 69%);
-  margin-top:2px;
+  margin-top:4px;
   display:flex;
   align-items:center;
   overflow:hidden;  
-  border-top:dashed 4px rgb(175, 246, 247);
-  border-bottom:dashed 4px rgb(175, 246, 247);
+   border-top:solid 4px rgb(175, 246, 247);
+  border-bottom:solid 4px rgb(175, 246, 247); 
 }
 
 .divider-image {
@@ -340,7 +558,7 @@ body {
 
 
 
-
+/*---------------------------|results section|---------------------------*/
 
 
 
@@ -418,6 +636,10 @@ body {
 
 
 
+/*---------------------------|footer|---------------------------*/
+
+
+
 
 
 
@@ -461,44 +683,7 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 750px) {
-  .geo-input {
-    flex-direction:column;
-    align-items:center;
-  }
-
-  .header-nav {
-    margin-right:36px;
-  }
-
-  .search-results-divider {
-    height:66px;
-  }
-}
-
-@media (max-width:500px) {
-  .search-comp {
-    margin:auto;
-    margin-top:165px;
-  }
-}
-
-@media (max-width: 350px) {
-  .header-nav {
-    margin-right:8px;
-  }
-}
-
+/*---------------------------|IATA page|---------------------------*/
 
 
 
@@ -523,3 +708,176 @@ body {
 .title-row {
   background:rgb(122, 249, 160);
 }
+
+
+
+
+
+
+
+/*---------------------------|disclaimer page|---------------------------*/
+
+
+
+
+
+
+
+.disclaimer-page-wrapper {
+  width:100%;
+  height:100vh;
+  background-image:url(./../img/modern-minimal-bg.jpg);
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  text-align:center;
+}
+
+.disclaimer-page-content {
+  position:fixed;
+  top:14%;
+  width:100%;
+  height:fit-content;
+}
+
+.disclaimer-page-content a {
+  text-decoration:none;
+}
+
+
+
+
+
+
+
+/*---------------------------|tech page|---------------------------*/
+
+
+
+
+
+
+.tech-wrapper {
+  width:100%;
+  height:100vh;
+  background-image:url(./../img/tech-img.jpg);
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  text-align:center;
+  display:flex;
+  justify-content:center;
+}
+
+.tech-content {
+  position:absolute;
+  top:24%;
+  width:248px;
+  height:248px;
+  display:flex;
+  justify-content:space-between;
+  align-items:space-between;
+  position:fixed;
+}
+
+.tech-content section {
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.tech-content div {
+  width:120px;
+  height:120px;
+  /* background:lightcyan; */
+  /* border:solid 1px darkcyan; */
+}
+
+.react-div {
+  background:url(./../img/tech/react-logo-dark.svg) center center;
+  background-size:contain;
+  background-repeat:no-repeat;
+}
+
+.redux-div {
+  background:url(./../img/tech/redux.png) center center;
+  background-size:contain;
+  background-repeat:no-repeat;
+}
+
+.JS-div {
+  background:url(./../img/tech/javascript.png) center center;
+  background-size:contain;
+  background-repeat:no-repeat;
+}
+
+.qpx-div {
+  background:url(./../img/tech/google.png) center center;
+  background-size:contain;
+  background-repeat:no-repeat;
+}
+
+
+
+
+
+/*---------------------------|media queries|---------------------------*/
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 750px) {
+  .geo-input {
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .header-nav {
+    margin-right:36px;
+  }
+
+  .search-results-divider {
+    height:62px;
+  }
+}
+
+@media (max-width:500px) {
+  .search-comp {
+    margin:auto;
+    margin-top:165px;
+  }
+
+  .landing-about {
+    height:fit-content;
+  }
+
+  .landing-disclaimer {
+    height:fit-content;
+  }
+
+  .footer-main {
+    height:fit-content;
+  }
+}
+
+@media (max-width: 350px) {
+  .header-nav {
+    margin-right:8px;
+  }
+}
+
+
+
+
+
+
+
+
+
+

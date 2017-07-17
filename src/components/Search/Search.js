@@ -103,7 +103,6 @@ class Search extends Component {
         console.log(this.state.returnBool)
     }
 
-
     delayPost() {
         var delay = new Promise(function(resolve, reject) {
             setTimeout(function() {
@@ -152,7 +151,10 @@ class Search extends Component {
             returnInput: '',
             passengers: ''
         })
+
+        window.scrollTo(0, 658);
     }
+
 
 
     render() {

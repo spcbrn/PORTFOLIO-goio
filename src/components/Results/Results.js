@@ -7,13 +7,6 @@ import {RenderResultsOneWay, RenderResultsRoundTrip} from './RenderResults';
 
 
 class Results extends Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            deets: []
-        }
-    }
 
 
     componentDidUpdate(props) {
