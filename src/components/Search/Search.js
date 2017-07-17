@@ -176,6 +176,7 @@ class Search extends Component {
                             </div>
                         </section>
                         <section className="timeframe-wrapper">
+                            <p className="conditional-text">Find your airport code!</p>
                             <p>When?</p>
                             <div className="time-input">
                                 <div className="depart-input">

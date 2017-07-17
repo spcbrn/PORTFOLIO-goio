@@ -1,10 +1,13 @@
 
+
+
+
 body {
   margin: 0;
   padding: 0;
   font-family: 'Work sans', sans-serif;
   height:100vh;
-   background:rgb(255, 250, 247); 
+  background:rgb(229, 239, 255);  
 }
 
 
@@ -58,6 +61,15 @@ body {
   flex-direction:column;
   align-items:center;
   justify-content:space-between;
+}
+
+.header-nav a {
+  color:#000;
+  text-decoration:none;
+}
+
+.header-nav a:hover {
+  color:#000;
 }
 
 
@@ -155,14 +167,16 @@ body {
   width:100%;
   height:100%;
   position:relative;
-  background:url(./../img/beach-scene-one-edit.jpg) top center; 
-  /* background-size:100% 42%; */
-  background-repeat:no-repeat;
+  /* background:url(./../img/beach-scene-one-edit.jpg) top center; 
+  background-repeat:no-repeat; */
 }
 
  .content-wrapper {
   display:flex;
-  flex-direction:column; 
+  flex-direction:column;
+  background:url(./../img/beach-scene-one-edit.jpg) top center; 
+  background-repeat:no-repeat;
+
 } 
 
 
@@ -197,7 +211,7 @@ body {
     width:fit-content;
     background: linear-gradient(to bottom, rgba(136,191,232,1) 0%,rgba(112,176,224,1) 100%);
     border-radius:5px;
-    margin-top:186px;
+    margin-top:165px;
     margin-left:10%;
     box-shadow: 10px 10px 41px -13px rgba(0,0,0,0.75);
     z-index:1;
@@ -234,6 +248,10 @@ body {
 
 .timeframe-wrapper {
   padding-top:16px;
+}
+
+.timeframe-wrapper .conditional-text {
+  font-size:x-small;
 }
 
 .depart-input {
@@ -334,8 +352,6 @@ body {
 .results-wrapper-main {
     width:100%;
     height:100vh;
-     /* display:flex;
-    flex-direction:column;  */
 }
 
 .results-container {
@@ -368,7 +384,7 @@ body {
   width:90%;
   text-align:center;
   margin:auto;
-   border-collapse:separate;
+  border-collapse:separate;
   border-spacing:0 .5em; 
 }
 
@@ -378,7 +394,7 @@ body {
     background:rgb(244, 251, 255);
     border-bottom:solid 1px rgb(30, 121, 160);
     border-top:solid 1px rgb(30, 121, 160);
-     border-left:solid 1px rgb(30, 121, 160);
+    border-left:solid 1px rgb(30, 121, 160);
     border-right:solid 1px rgb(30, 121, 160); 
     margin-top:8px;
     z-index:1;
@@ -409,8 +425,34 @@ body {
 
 .footer-main {
   width:100%;
-  height:96px;
-  background:rgb(19, 41, 68);
+  height:102px;
+  color:#FFF;
+  text-align:center;
+  background: linear-gradient(to right, rgba(02, 02, 02, 1) 20%,rgba(0, 21, 35, 1) 50%,rgba(02, 02, 02, 1) 80%);
+  padding-top:16px;
+  padding-bottom:12px;
+}
+
+.footer-main p {
+  margin-top:0px;
+  margin-bottom:0px;
+}
+
+.footer-main a {
+  color:#fff;
+  text-decoration:none;
+}
+
+.footer-main a:hover {
+  color:rgb(122, 249, 160);
+}
+
+.footer-icon {
+  background:url(./../img/earth1.png);
+  background-size:contain;
+  height:56px;
+  width:56px;
+  margin:auto;
 }
 
 
@@ -447,7 +489,7 @@ body {
 @media (max-width:500px) {
   .search-comp {
     margin:auto;
-    margin-top:186px;
+    margin-top:165px;
   }
 }
 
@@ -455,4 +497,29 @@ body {
   .header-nav {
     margin-right:8px;
   }
+}
+
+
+
+
+
+
+
+
+
+
+.IATA-wrapper {
+  width:100%
+}
+
+.IATA-table-wrapper {
+  width:fit-content;
+  height:fit-content;
+  margin:auto;
+  padding-top:172px;
+  padding-bottom:72px;
+}
+
+.title-row {
+  background:rgb(122, 249, 160);
 }
