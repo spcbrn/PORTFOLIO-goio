@@ -2,7 +2,7 @@
 
 # dependencies
 /node_modules
-trip.js
+/trip.js
 
 # testing
 /coverage
