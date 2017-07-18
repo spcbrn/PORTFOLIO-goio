@@ -49,7 +49,7 @@ class Search extends Component {
                             "origin": '',
                             "destination": '',
                             "date": '',
-                            "maxStops": 1
+                            "maxStops": 3
                         }
                     ],
                     "solutions": 30
